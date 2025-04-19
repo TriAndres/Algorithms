@@ -1,4 +1,4 @@
-package ru.practicum.coderun.service;
+package ru.practicum.coderun.quickstart;
 
 import java.io.*;
 
