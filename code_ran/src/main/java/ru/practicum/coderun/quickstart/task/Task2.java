@@ -1,4 +1,4 @@
-package ru.practicum.coderun.quickstart;
+package ru.practicum.coderun.quickstart.task;
 
 import java.io.*;
 
