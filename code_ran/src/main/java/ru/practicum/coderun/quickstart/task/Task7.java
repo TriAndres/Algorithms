@@ -3,7 +3,7 @@ package ru.practicum.coderun.quickstart.task;
 import java.io.*;
 import java.util.HashSet;
 
-public class Task7 {
+public class Task7 extends Task {
     public static void main(String[] args) {
         new Task7().game();
     }
@@ -14,22 +14,7 @@ public class Task7 {
 
             HashSet<String> uniqueWords = new HashSet<>();
 
-            System.out.println("Введите:\n" +
-                    "Ввод:\nS" +
-                    "he sells sea shells on the sea shore;\n" +
-                    "The shells that she sells are sea shells I'm sure.\n" +
-                    "So if she sells sea shells on the sea shore,\n" +
-                    "I'm sure that the shells are sea shore shells.\n" +
-                    "Вывод\n" +
-                    "19\n" +
-                    "Ввод\n" +
-                    "AA aa Aa aA\n" +
-                    "Вывод\n" +
-                    "4\n" +
-                    "Ввод\n" +
-                    "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a\n" +
-                    "Вывод\n" +
-                    "1\n");//дополнительно
+            menu();//дополнительно
 
             String line;
             while ((line = reader.readLine()) != null && !line.isEmpty()) {
@@ -47,5 +32,24 @@ public class Task7 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void menu() {
+        System.out.println("Введите:\n" +
+                "Ввод:\nS" +
+                "he sells sea shells on the sea shore;\n" +
+                "The shells that she sells are sea shells I'm sure.\n" +
+                "So if she sells sea shells on the sea shore,\n" +
+                "I'm sure that the shells are sea shore shells.\n" +
+                "Вывод\n" +
+                "19\n" +
+                "Ввод\n" +
+                "AA aa Aa aA\n" +
+                "Вывод\n" +
+                "4\n" +
+                "Ввод\n" +
+                "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a\n" +
+                "Вывод\n" +
+                "1\n");
     }
 }

@@ -3,7 +3,7 @@ package ru.practicum.coderun.quickstart.task;
 import java.io.*;
 import java.util.HashSet;
 
-public class Task6 {
+public class Task6 extends Task {
     public static void main(String[] args) {
         new Task6().game();
     }
@@ -11,10 +11,7 @@ public class Task6 {
     public void game() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
              BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out))) {
-            System.out.println("Введите:\n" +
-                    "Ввод:\n1 2 3\n1123\nВывод\n0\n" +
-                    "Ввод:\n1 2 3\n1001\nВывод\n1\n" +
-                    "Ввод:\n5 7 3\n123\nВывод\n2\n");//дополнительно
+            menu();//дополнительно
             String[] input;
             do {
                 input = reader.readLine().split("\\s+");
@@ -53,6 +50,13 @@ public class Task6 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void menu() {//дополнительно
+        System.out.println("Введите:\n" +
+                "Ввод:\n1 2 3\n1123\nВывод\n0\n" +
+                "Ввод:\n1 2 3\n1001\nВывод\n1\n" +
+                "Ввод:\n5 7 3\n123\nВывод\n2\n");
     }
 
     private static boolean isNumeric(String str) {
