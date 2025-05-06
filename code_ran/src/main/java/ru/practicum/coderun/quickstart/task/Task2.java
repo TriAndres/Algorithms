@@ -2,7 +2,7 @@ package ru.practicum.coderun.quickstart.task;
 
 import java.io.*;
 
-public class Task2 {
+public class Task2 extends Task {
     public static void main(String[] args) {
         new Task2().game();
     }
@@ -10,13 +10,11 @@ public class Task2 {
     public void game() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
              BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out))) {
-            System.out.println("Введите число а:");//дополнительно
+            menu();//дополнительно
             long a = getNum(reader);
-            System.out.println("Введите число b:");//дополнительно
             long b = getNum(reader);
-            System.out.println("Введите число c:");//дополнительно
             long c = getNum(reader);
-            System.out.println("Вывод:");//дополнительно
+
             if (action(a, b, c)) {
                 writer.write("YES\n");
             } else {
@@ -25,6 +23,13 @@ public class Task2 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void menu() {//дополнительно
+        System.out.println("Введите:\n" +
+                "Ввод:\n3\n4\n5\nВывод\nYES\n" +
+                "Ввод:\n3\n5\n4\nВывод\nYES\n" +
+                "Ввод:\n4\n5\n3\nВывод\nYES\n");
     }
 
     private boolean action(long a, long b, long c) {
