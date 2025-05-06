@@ -10,7 +10,7 @@ public class Task9 extends Task {
     public void game() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
              BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out))) {
-
+            menu();
             String[] dimensions = reader.readLine().split("\\s+");
             int n = Integer.parseInt(dimensions[0]); // строки матрицы A
             int m = Integer.parseInt(dimensions[1]); // столбцы матрицы A и строки матрицы B
@@ -51,7 +51,36 @@ public class Task9 extends Task {
     }
 
     public void menu() {
-
+        System.out.println("Ввод\n" +
+                "1 2 1\n" +
+                "3 4 \n" +
+                "9 \n" +
+                "8\n" +
+                "Вывод\n" +
+                "59\n" +
+                "Ввод\n" +
+                "2 1 3\n" +
+                "0 \n" +
+                "2 \n" +
+                "1 2 8\n" +
+                "Вывод\n" +
+                "0 2 \n" +
+                "0 4 \n" +
+                "0 16\n" +
+                "Ввод\n" +
+                "6 1 4\n" +
+                "6 \n" +
+                "1 \n" +
+                "3 \n" +
+                "3 \n" +
+                "1 \n" +
+                "9 \n" +
+                "10 2 0 3\n" +
+                "Вывод\n" +
+                "60 10 30 30 10 90 \n" +
+                "12 2 6 6 2 18 \n" +
+                "0 0 0 0 0 0 \n" +
+                "18 3 9 9 3 27\n");
     }
 
     private static int[][] multiplyMatrices(int[][] A, int[][] B, int n, int m, int k) {
